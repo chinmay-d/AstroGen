@@ -160,20 +160,21 @@ pip install -r requirements.txt
 ```
 
 4. **Download Required Models**  
-  AstroGen depends on two Hugging Face models. Download them manually (or via the Hugging Face CLI/Python SDK) and place them inside the `models/` directory in the project root.  
+AstroGen depends on two Hugging Face models. Download them manually (or via the Hugging Face CLI/Python SDK) and place them inside the `models/` directory in the project root.  
 
-  - **Translation Model (English → Hindi):**  
-    [`ai4bharat/indictrans2-en-indic-dist-200M`](https://huggingface.co/ai4bharat/indictrans2-en-indic-dist-200M)  
+- **Translation Model (English → Hindi):**  
+  [`ai4bharat/indictrans2-en-indic-dist-200M`](https://huggingface.co/ai4bharat/indictrans2-en-indic-dist-200M)  
 
-  - **Embedding Model (for RAG):**  
-    [`nomic-ai/nomic-embed-text-v1`](https://huggingface.co/nomic-ai/nomic-embed-text-v1)  
+- **Embedding Model (for RAG):**  
+  [`nomic-ai/nomic-embed-text-v1`](https://huggingface.co/nomic-ai/nomic-embed-text-v1)  
 
-  Example (using `huggingface_hub` Python utility):  
-  ```bash
-  pip install huggingface_hub
+Example (using `huggingface_hub` Python utility):  
+```bash
+pip install huggingface_hub
 
-  huggingface-cli download ai4bharat/indictrans2-en-indic-dist-200M --local-dir ./models/indictrans2-en-indic-dist-200M
-  huggingface-cli download nomic-ai/nomic-embed-text-v1 --local-dir ./models/nomic-embed-text-v1
+huggingface-cli download ai4bharat/indictrans2-en-indic-dist-200M --local-dir ./models/indictrans2-en-indic-dist-200M
+huggingface-cli download nomic-ai/nomic-embed-text-v1 --local-dir ./models/nomic-embed-text-v1
+```
 
 5. After completing the setup, the APIs defined in main.py can be used.
 Start the app using the following commands:
