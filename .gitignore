@@ -1,0 +1,13 @@
+# Ignore .python-version files anywhere in the repo
+.python-version
+
+#Ignore all .env files
+.env
+
+# All pycache
+api/__pycache__
+api/**/__pycache__
+
+# ignore models
+models/indictrans2-en-indic-dist-200M
+models/nomic-ai
