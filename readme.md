@@ -128,8 +128,8 @@ AstroGen is a simple **astrological insight generator**. It provides personalize
 ## ⚙️ Quick Setup
 
 1. **Run MongoDB**  
-   You can either run MongoDB locally or via Docker.  
-   To spin up MongoDB using Docker, run:
+  You can either run MongoDB locally or via Docker.  
+  To spin up MongoDB using Docker, run:
 
 ```bash
   docker run -d --name mongodb -p 27017:27017 \
@@ -138,9 +138,9 @@ AstroGen is a simple **astrological insight generator**. It provides personalize
   mongodb/mongodb-community-server:latest
 ```
 
-2. Configure Environment Variables
-   Copy .env.example to .env and update the values.
-   Example .env file:
+2. **Configure Environment Variables**  
+  Copy` .env.example` to `.env` and update the values.
+  Example .env file:
 
 ```bash
 export OPENAI_API_KEY="YOUR_OPENAI_API_KEY"
@@ -149,8 +149,8 @@ export MONGODB_URI="YOUR_MONGODB_URI"
 export MONGODB_DATABASE="YOUR_MONGO_DATABASE_NAME"
 ```
 
-3.	Set Up Python Environment
-Create a virtual environment using your preferred tool (venv, pyenv, or conda), then install dependencies:
+3.	**Set Up Python Environment**   
+  Create a virtual environment using your preferred tool (venv, pyenv, or conda), then install dependencies:
 
 ```bash
 python -m venv .venv
@@ -159,16 +159,16 @@ source .venv/bin/activate   # On Windows use: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-4. **Download Required Models**  
-AstroGen depends on two Hugging Face models. Download them manually (or via the Hugging Face CLI/Python SDK) and place them inside the `models/` directory in the project root.  
+4. **Download Required Models**    
+  AstroGen depends on two Hugging Face models. Download them manually (or via the Hugging Face CLI/Python SDK) and place them inside the `models/` directory in the project root.  
 
-- **Translation Model (English → Hindi):**  
-  [`ai4bharat/indictrans2-en-indic-dist-200M`](https://huggingface.co/ai4bharat/indictrans2-en-indic-dist-200M)  
+    - **Translation Model (English → Hindi):**  
+      [`ai4bharat/indictrans2-en-indic-dist-200M`](https://huggingface.co/ai4bharat/indictrans2-en-indic-dist-200M)  
 
-- **Embedding Model (for RAG):**  
-  [`nomic-ai/nomic-embed-text-v1`](https://huggingface.co/nomic-ai/nomic-embed-text-v1)  
+    - **Embedding Model (for RAG):**  
+      [`nomic-ai/nomic-embed-text-v1`](https://huggingface.co/nomic-ai/nomic-embed-text-v1)  
 
-Example (using `huggingface_hub` Python utility):  
+    Example (using `huggingface_hub` Python utility):  
 ```bash
 pip install huggingface_hub
 
@@ -176,14 +176,15 @@ huggingface-cli download ai4bharat/indictrans2-en-indic-dist-200M --local-dir ./
 huggingface-cli download nomic-ai/nomic-embed-text-v1 --local-dir ./models/nomic-embed-text-v1
 ```
 
-5. After completing the setup, the APIs defined in main.py can be used.
-Start the app using the following commands:
+5. **Run the app**  
+  After completing the setup, the APIs defined in main.py can be used.
+  Start the app using the following commands:
 ```bash
 chmod +x devrun.sh
 ./devrun.sh
 ```
-The application will be available at:
-👉 http://localhost:9999
+  The application will be available at:   
+    👉 http://localhost:9999
 
 ---
 
